@@ -18,5 +18,7 @@ class MainActivity : DaggerAppCompatActivity() {
 
         val textView = findViewById<TextView>(R.id.textView)
         textView.text = dummyDependency
+
+        supportFragmentManager.beginTransaction().replace(R.id.fragmentHolder, MainFragment()).commit()
     }
 }
