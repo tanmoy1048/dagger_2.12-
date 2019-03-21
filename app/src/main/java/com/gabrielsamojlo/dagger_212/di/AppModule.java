@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 
 
+import com.gabrielsamojlo.dagger_212.main.MainActivityComponent;
+
 import java.util.Calendar;
 
 import dagger.Binds;

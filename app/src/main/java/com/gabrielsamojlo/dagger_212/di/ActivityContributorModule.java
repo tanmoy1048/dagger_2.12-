@@ -1,7 +1,7 @@
 package com.gabrielsamojlo.dagger_212.di;
 
-import com.gabrielsamojlo.dagger_212.MainActivity;
-import com.gabrielsamojlo.dagger_212.MainFragment;
+import com.gabrielsamojlo.dagger_212.main.MainActivity;
+import com.gabrielsamojlo.dagger_212.main.MainActivityModule;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
@@ -9,7 +9,7 @@ import dagger.android.ContributesAndroidInjector;
 @Module
 public abstract class ActivityContributorModule {
 
-    @ContributesAndroidInjector(modules = {FragmentContributorModule.class})
+    @ContributesAndroidInjector(modules = {MainActivityModule.class, FragmentContributorModule.class})
     abstract MainActivity contributeMainActivity();
 
 }
