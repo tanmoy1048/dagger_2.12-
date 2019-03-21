@@ -5,6 +5,7 @@ import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.widget.TextView
 import com.gabrielsamojlo.dagger_212.R
+import com.gabrielsamojlo.dagger_212.main.fragment.MainFragment
 
 import javax.inject.Inject
 
@@ -25,6 +26,6 @@ class MainActivity : DaggerAppCompatActivity() {
         val textView = findViewById<TextView>(R.id.textView)
         textView.text = mMainViewModel!!.test
 
-        //supportFragmentManager.beginTransaction().replace(R.id.fragmentHolder, MainFragment()).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.fragmentHolder, MainFragment()).commit()
     }
 }
